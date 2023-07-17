@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nexim Feeder Setup Report Generator
-// @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @namespace    https://github.com/Worthington-Assembly/SetupReports/
+// @version      1.0.2
 // @description  Generates and formats a Nexim Feeder Setup Report
 // @author       JackMBurch
 // @match        file:///C:/Nexim/Client/Data/Report2021/Work1/index.html
