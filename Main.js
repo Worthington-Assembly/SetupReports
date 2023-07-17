@@ -6,8 +6,8 @@
 // @author       JackMBurch
 // @match        file:///C:/Nexim/Client/Data/Report2021/Work1/index.html
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=microsoft.com
-// @updateURL    https://github.com/Worthington-Assembly/SetupReports/blob/main/Main.js
-// @downloadURL  https://github.com/Worthington-Assembly/SetupReports/blob/main/Main.js
+// @updateURL    https://raw.githubusercontent.com/Worthington-Assembly/SetupReports/main/Main.js
+// @downloadURL  https://raw.githubusercontent.com/Worthington-Assembly/SetupReports/main/Main.js
 // @grant        none
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
