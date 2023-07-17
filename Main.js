@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Nexim Feeder Setup Report Generator
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  Generates and formats a Nexim Feeder Setup Report
 // @author       JackMBurch
 // @match        file:///C:/Nexim/Client/Data/Report2021/Work1/index.html
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=microsoft.com
+// @updateURL    https://github.com/Worthington-Assembly/SetupReports/blob/main/Main.js
+// @downloadURL  https://github.com/Worthington-Assembly/SetupReports/blob/main/Main.js
 // @grant        none
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
