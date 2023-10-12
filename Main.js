@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nexim Feeder Setup Report Generator
 // @namespace    https://github.com/Worthington-Assembly/SetupReports/
-// @version      1.0.2
+// @version      1.1.0
 // @description  Generates and formats a Nexim Feeder Setup Report
 // @author       JackMBurch
 // @match        file:///C:/Nexim/Client/Data/Report2021/Work1/index.html
@@ -170,7 +170,7 @@ function preview()
 	{
 		window.print();
 	}
-	ShowBoder();
+	ShowBorder();
 	document.body.style.backgroundColor = "#333";
 }
 
@@ -198,9 +198,14 @@ function HideBorder() {
 	_targElem2.css('height','');
 	_targElem1[0].removeAttribute("class");
 	_targElem0[0].removeAttribute("class");
+
+    // Added for compatibility with modern browsers
+    $('link[href="../igniteui/css/structure/infragistics.css"]').attr("href", "https://raw.githubusercontent.com/Worthington-Assembly/SetupReports/main/infragistics-replace.css");
+    $('.ui-iggrid-indicatorcontainer').hide();
+    $('.ui-iggrid-expandbuttoncontainer-group-by').hide();
 }
 
-function ShowBoder() {
+function ShowBorder() {
 	_targElem0[0].className = _elem0Class;
 	_targElem1[0].className = _elem1Class;
 	_targElem2[0].style.cssText = _elem2Style;
@@ -211,6 +216,11 @@ function ShowBoder() {
 	$(".ui-igtile-maximized").find(".ui-igtile-inner-container").css("border", border);
 
 	SpliterHide();
+
+    // Added for compatibility with modern browsers
+    $('link[href="https://raw.githubusercontent.com/Worthington-Assembly/SetupReports/main/infragistics-replace.css"]').attr("href", "../igniteui/css/structure/infragistics.css");
+    $('.ui-iggrid-indicatorcontainer').show();
+    $('.ui-iggrid-expandbuttoncontainer-group-by').show();
 }
 
 var spliteheight = "";
@@ -232,16 +242,16 @@ function SpliterHide() {
 			spliteheight = $("#splitter").css("height");
 			maximizedheight = $(".ui-igtile-maximized").css("height");
 			if ( parseFloat(height[0]) > 790) {
-//				$("#splitter").css("height", parseFloat(height[0]) + 100);
-//				$(".ui-igtile-maximized").css("height", parseFloat(height[0]) + 90);
+				$("#splitter").css("height", parseFloat(height[0]) + 100);
+				$(".ui-igtile-maximized").css("height", parseFloat(height[0]) + 90);
 			}
 		}
 		else {
 			$(".ui-igtilemanager-right").css("width", rightwidth);
 			$(".ui-igtilemanager-left").css("width", leftwidth);
 			hidden = false;
-//			$("#splitter").css("height", spliteheight);
-//			$(".ui-igtile-maximized").css("height", maximizedheight)
+			$("#splitter").css("height", spliteheight);
+			$(".ui-igtile-maximized").css("height", maximizedheight)
 		}
 	}
 }
